@@ -57,6 +57,7 @@ chart.projection = new am4maps.projections.Orthographic();
 chart.panBehavior = "rotateLongLat";
 //chart.padding(10,10,10,10);
 chart.padding(0,0,0,0);
+chart.dx=200;
 
 // Add zoom control
 /*
