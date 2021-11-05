@@ -193,13 +193,13 @@ polygonSeries.events.on("inited", function () {
 })
 
 var data = {
-  "BR": "Testing<br>Name",
-  "CR": "Test<br>Name2",
-  "MX": "Batman</br>Foreva",
-  "CO": "Batman</br>Foreva",
-  "EC": "Batman</br>Foreva",
-  "ES": "Batman</br>Foreva",
-  "US": "Batman</br>Foreva"
+  "BR": "Bruno<br>Marigoni",
+  "CR": "Bruno<br>Marigoni",
+  "MX": "Bruno<br>Marigoni",
+  "CO": "Bruno<br>Marigoni",
+  "EC": "Bruno<br>Marigoni",
+  "ES": "Bruno<br>Marigoni",
+  "US": "Bruno<br>Marigoni"
 }
 
 chart.homeZoomLevel = 1.8;
