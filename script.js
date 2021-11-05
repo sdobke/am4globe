@@ -174,8 +174,13 @@ var dato = data[mapPolygon.id];
 if (dato != undefined) {
 var polygon = measelsSeries.mapPolygons.create();
 polygon.multiPolygon = am4maps.getCircle(mapPolygon.visualLongitude, mapPolygon.visualLatitude, 2);
+var datos = dato.split("*");
+var pais = datos[0];
+var nombre = datos[1];
+var foto = datos[2];
+
 //polygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": " + dato;
-polygon.tooltipHTML = '<div style="min-height:90px; min-width:200px; padding:10px;background-color:#033767"><table><tr><td><table><tr><td style="border-bottom:1px solid #fff;padding-bottom:10px;color:white">' + mapPolygon.dataItem.dataContext.name + '</td></tr><tr><td style="color:white">' + dato + '</td></tr></table></td><td><img width="80" src="fotos/'+mapPolygon.dataItem.dataContext.name+'.png"></td></tr></table></div>';
+polygon.tooltipHTML = '<div style="min-height:90px; min-width:200px; padding:10px;background-color:#033767"><table><tr><td><table><tr><td style="border-bottom:1px solid #fff;padding-bottom:10px;color:white">' + pais + '</td></tr><tr><td style="color:white">' + nombre + '</td></tr></table></td><td><img width="80" src="fotos/'+foto+'.png"></td></tr></table></div>';
 
 mapPolygon.dummyData = polygon;
 polygon.events.on("over", function () {
@@ -193,25 +198,23 @@ else {
 })
 
 var data = {
-"BR": "Testing<br>Name",
-"CR": "Test<br>Name2",
-"MX": "Batman</br>Foreva",
-"CO": "Batman</br>Foreva",
-"EC": "Batman</br>Foreva",
-"ES": "Batman</br>Foreva",
-"US": "Batman</br>Foreva"
+"BR": "Brasil*Nombre<br>Apellido*Brazil",
+"CR": "Costa Rica*Nombre<br>Apellido*Brazil",
+"ES": "España*Nombre<br>Apellido*Brazil",
+"US": "USA*Nombre<br>Apellido*Brazil",
+"MX": "Mexico*Nombre<br>Apellido*Brazil"
 }
 
 chart.homeZoomLevel = 1.8;
 chart.homeGeoPoint = {
   latitude: 14,
-  longitude: 110
+  longitude: 125
 }
 chart.seriesContainer.draggable = false;
 chart.seriesContainer.resizable = false;
 chart.chartContainer.wheelable = false;
-chart.deltaLongitude = 70;
+chart.deltaLongitude = 55;
 chart.panBehavior = "rotateLongLat";
 //chart.padding(10,10,10,10);
 chart.padding(0,0,0,0);
-chart.dx=0;
+chart.dx=60;
