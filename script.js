@@ -54,10 +54,7 @@ chart.raiseCriticalError(new Error("Map geodata could not be loaded. Please down
 
 // Set projection
 chart.projection = new am4maps.projections.Orthographic();
-chart.panBehavior = "rotateLongLat";
-//chart.padding(10,10,10,10);
-chart.padding(0,0,0,0);
-chart.dx=200;
+
 
 // Add zoom control
 /*
@@ -205,8 +202,6 @@ var data = {
 "US": "Batman</br>Foreva"
 }
 
-
-
 chart.homeZoomLevel = 1.8;
 chart.homeGeoPoint = {
   latitude: 14,
@@ -215,4 +210,8 @@ chart.homeGeoPoint = {
 chart.seriesContainer.draggable = false;
 chart.seriesContainer.resizable = false;
 chart.chartContainer.wheelable = false;
-chart.deltaLongitude = 52;
+chart.deltaLongitude = 70;
+chart.panBehavior = "rotateLongLat";
+//chart.padding(10,10,10,10);
+chart.padding(0,0,0,0);
+chart.dx=0;

@@ -20,3 +20,11 @@ body {
 }
 .img_data{width: 240px}
 .align-center{text-align: center;}
+.texto{text-align: left;}
+
+@media screen and (max-width: 1199px) {
+  .texto{text-align: center;}
+}
+@media screen and (max-width: 1399px) {
+  .texto{ padding-left: 30px;}
+}
