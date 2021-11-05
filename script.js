@@ -17,7 +17,7 @@
 * PLEASE DO NOT REMOVE THIS COPYRIGHT NOTICE.
 * @hidden
 */
-am4internal_webpackJsonp(["ab45"],{lhmh:function(t,e,i){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var n=i("aCit"),a=function(t){Object(n.b)(t,"SpriteState")&&(t.transitionDuration=400),Object(n.b)(t,"Component")&&(t.rangeChangeDuration=500,t.interpolationDuration=500,t.sequencedInterpolation=!1,Object(n.b)(t,"SankeyDiagram")&&(t.sequencedInterpolation=!0),Object(n.b)(t,"FunnelSeries")&&(t.sequencedInterpolation=!0)),Object(n.b)(t,"Chart")&&(t.defaultState.transitionDuration=2e3,t.hiddenState.transitionDuration=1e3),Object(n.b)(t,"Tooltip")&&(t.animationDuration=400,t.defaultState.transitionDuration=400,t.hiddenState.transitionDuration=400),Object(n.b)(t,"Scrollbar")&&(t.animationDuration=500),Object(n.b)(t,"Series")&&(t.defaultState.transitionDuration=1e3,t.hiddenState.transitionDuration=700,t.hiddenState.properties.opacity=1,t.showOnInit=!0),Object(n.b)(t,"MapSeries")&&(t.hiddenState.properties.opacity=0),Object(n.b)(t,"PercentSeries")&&(t.hiddenState.properties.opacity=0),Object(n.b)(t,"FunnelSlice")&&(t.defaultState.transitionDuration=800,t.hiddenState.transitionDuration=1e3,t.hiddenState.properties.opacity=1),Object(n.b)(t,"Slice")&&(t.defaultState.transitionDuration=700,t.hiddenState.transitionDuration=1e3,t.hiddenState.properties.opacity=1),Object(n.b)(t,"Preloader")&&(t.hiddenState.transitionDuration=2e3),Object(n.b)(t,"Column")&&(t.defaultState.transitionDuration=700,t.hiddenState.transitionDuration=1e3,t.hiddenState.properties.opacity=1),Object(n.b)(t,"Column3D")&&(t.hiddenState.properties.opacity=0)};window.am4themes_animated=a}},["lhmh"]);
+am4internal_webpackJsonp(["ab45"], { lhmh: function (t, e, i) { "use strict"; Object.defineProperty(e, "__esModule", { value: !0 }); var n = i("aCit"), a = function (t) { Object(n.b)(t, "SpriteState") && (t.transitionDuration = 400), Object(n.b)(t, "Component") && (t.rangeChangeDuration = 500, t.interpolationDuration = 500, t.sequencedInterpolation = !1, Object(n.b)(t, "SankeyDiagram") && (t.sequencedInterpolation = !0), Object(n.b)(t, "FunnelSeries") && (t.sequencedInterpolation = !0)), Object(n.b)(t, "Chart") && (t.defaultState.transitionDuration = 2e3, t.hiddenState.transitionDuration = 1e3), Object(n.b)(t, "Tooltip") && (t.animationDuration = 400, t.defaultState.transitionDuration = 400, t.hiddenState.transitionDuration = 400), Object(n.b)(t, "Scrollbar") && (t.animationDuration = 500), Object(n.b)(t, "Series") && (t.defaultState.transitionDuration = 1e3, t.hiddenState.transitionDuration = 700, t.hiddenState.properties.opacity = 1, t.showOnInit = !0), Object(n.b)(t, "MapSeries") && (t.hiddenState.properties.opacity = 0), Object(n.b)(t, "PercentSeries") && (t.hiddenState.properties.opacity = 0), Object(n.b)(t, "FunnelSlice") && (t.defaultState.transitionDuration = 800, t.hiddenState.transitionDuration = 1e3, t.hiddenState.properties.opacity = 1), Object(n.b)(t, "Slice") && (t.defaultState.transitionDuration = 700, t.hiddenState.transitionDuration = 1e3, t.hiddenState.properties.opacity = 1), Object(n.b)(t, "Preloader") && (t.hiddenState.transitionDuration = 2e3), Object(n.b)(t, "Column") && (t.defaultState.transitionDuration = 700, t.hiddenState.transitionDuration = 1e3, t.hiddenState.properties.opacity = 1), Object(n.b)(t, "Column3D") && (t.hiddenState.properties.opacity = 0) }; window.am4themes_animated = a } }, ["lhmh"]);
 //# sourceMappingURL=animated.js.map
 
 // Themes begin
@@ -29,10 +29,10 @@ var chart = am4core.create("chartdiv", am4maps.MapChart);
 var interfaceColors = new am4core.InterfaceColorSet();
 
 try {
-chart.geodata = am4geodata_worldLow;
+  chart.geodata = am4geodata_worldLow;
 }
 catch (e) {
-chart.raiseCriticalError(new Error("Map geodata could not be loaded. Please download the latest <a href=\"https://www.amcharts.com/download/download-v4/\">amcharts geodata</a> and extract its contents into the same directory as your amCharts files."));
+  chart.raiseCriticalError(new Error("Map geodata could not be loaded. Please download the latest <a href=\"https://www.amcharts.com/download/download-v4/\">amcharts geodata</a> and extract its contents into the same directory as your amCharts files."));
 }
 
 
@@ -87,10 +87,10 @@ var shadowPolygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 shadowPolygonSeries.geodata = am4geodata_continentsLow;
 
 try {
-shadowPolygonSeries.geodata = am4geodata_continentsLow;
+  shadowPolygonSeries.geodata = am4geodata_continentsLow;
 }
 catch (e) {
-shadowPolygonSeries.raiseCriticalError(new Error("Map geodata could not be loaded. Please download the latest <a href=\"https://www.amcharts.com/download/download-v4/\">amcharts geodata</a> and extract its contents into the same directory as your amCharts files."));
+  shadowPolygonSeries.raiseCriticalError(new Error("Map geodata could not be loaded. Please download the latest <a href=\"https://www.amcharts.com/download/download-v4/\">amcharts geodata</a> and extract its contents into the same directory as your amCharts files."));
 }
 
 shadowPolygonSeries.useGeodata = true;
@@ -122,14 +122,14 @@ template.tooltipPosition = "fixed";
 template.fillOpacity = 1;
 
 template.events.on("over", function (event) {
-if (event.target.dummyData) {
-event.target.dummyData.isHover = true;
-}
+  if (event.target.dummyData) {
+    event.target.dummyData.isHover = true;
+  }
 })
 template.events.on("out", function (event) {
-if (event.target.dummyData) {
-event.target.dummyData.isHover = false;
-}
+  if (event.target.dummyData) {
+    event.target.dummyData.isHover = false;
+  }
 })
 
 var hs = polygonSeries.mapPolygons.template.states.create("hover");
@@ -169,37 +169,37 @@ hs2.properties.fill = am4core.color("#123e6b");
 */
 
 polygonSeries.events.on("inited", function () {
-polygonSeries.mapPolygons.each(function (mapPolygon) {
-var dato = data[mapPolygon.id];
-if (dato != undefined) {
-var polygon = measelsSeries.mapPolygons.create();
-polygon.multiPolygon = am4maps.getCircle(mapPolygon.visualLongitude, mapPolygon.visualLatitude, 2);
-//polygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": " + dato;
-polygon.tooltipHTML = '<div style="min-height:90px; min-width:200px; padding:10px;background-color:#033767"><table><tr><td><table><tr><td style="border-bottom:1px solid #fff;padding-bottom:10px;color:white">' + mapPolygon.dataItem.dataContext.name + '</td></tr><tr><td style="color:white">' + dato + '</td></tr></table></td><td><img width="80" src="fotos/'+mapPolygon.dataItem.dataContext.name+'.png"></td></tr></table></div>';
+  polygonSeries.mapPolygons.each(function (mapPolygon) {
+    var dato = data[mapPolygon.id];
+    if (dato != undefined) {
+      var polygon = measelsSeries.mapPolygons.create();
+      polygon.multiPolygon = am4maps.getCircle(mapPolygon.visualLongitude, mapPolygon.visualLatitude, 2);
+      //polygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": " + dato;
+      polygon.tooltipHTML = '<div style="min-height:90px; min-width:200px; padding:10px;background-color:#033767"><table><tr><td><table><tr><td style="border-bottom:1px solid #fff;padding-bottom:10px;color:white">' + mapPolygon.dataItem.dataContext.name + '</td></tr><tr><td style="color:white">' + dato + '</td></tr></table></td><td><img width="80" src="fotos/' + mapPolygon.dataItem.dataContext.name + '.png"></td></tr></table></div>';
 
-mapPolygon.dummyData = polygon;
-polygon.events.on("over", function () {
-mapPolygon.isHover = true;
-})
-polygon.events.on("out", function () {
-mapPolygon.isHover = false;
-})
-}
-else {
-//mapPolygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": no data";
-//mapPolygon.fillOpacity = 0.9;
-}
-})
+      mapPolygon.dummyData = polygon;
+      polygon.events.on("over", function () {
+        mapPolygon.isHover = true;
+      })
+      polygon.events.on("out", function () {
+        mapPolygon.isHover = false;
+      })
+    }
+    else {
+      //mapPolygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": no data";
+      //mapPolygon.fillOpacity = 0.9;
+    }
+  })
 })
 
 var data = {
-"BR": "Testing<br>Name",
-"CR": "Test<br>Name2",
-"MX": "Batman</br>Foreva",
-"CO": "Batman</br>Foreva",
-"EC": "Batman</br>Foreva",
-"ES": "Batman</br>Foreva",
-"US": "Batman</br>Foreva"
+  "BR": "Testing<br>Name",
+  "CR": "Test<br>Name2",
+  "MX": "Batman</br>Foreva",
+  "CO": "Batman</br>Foreva",
+  "EC": "Batman</br>Foreva",
+  "ES": "Batman</br>Foreva",
+  "US": "Batman</br>Foreva"
 }
 
 chart.homeZoomLevel = 1.8;
@@ -213,5 +213,5 @@ chart.chartContainer.wheelable = false;
 chart.deltaLongitude = 70;
 chart.panBehavior = "rotateLongLat";
 //chart.padding(10,10,10,10);
-chart.padding(0,0,0,0);
-chart.dx=0;
+chart.padding(0, 0, 0, 0);
+chart.dx = 0;
