@@ -175,7 +175,12 @@ polygonSeries.events.on("inited", function () {
       var polygon = measelsSeries.mapPolygons.create();
       polygon.multiPolygon = am4maps.getCircle(mapPolygon.visualLongitude, mapPolygon.visualLatitude, 2);
       //polygon.tooltipText = mapPolygon.dataItem.dataContext.name + ": " + dato;
-      polygon.tooltipHTML = '<div style="min-height:90px; min-width:200px; padding:10px;background-color:#033767"><table><tr><td><table><tr><td style="border-bottom:1px solid #fff;padding-bottom:10px;color:white">' + mapPolygon.dataItem.dataContext.name + '</td></tr><tr><td style="color:white">' + dato + '</td></tr></table></td><td><img width="80" src="fotos/' + mapPolygon.dataItem.dataContext.name + '.png"></td></tr></table></div>';
+      var datos = dato.split("*");
+      var pais = datos[0];
+      var nombre = datos[1];
+      var foto = datos[2];
+
+      polygon.tooltipHTML = '<div style="min-height:90px; min-width:200px; padding:10px;background-color:#033767"><table><tr><td><table><tr><td style="border-bottom:1px solid #fff;padding-bottom:10px;color:white">' + pais + '</td></tr><tr><td style="color:white">' + nombre + '</td></tr></table></td><td><img width="80" src="fotos/'+foto+'.png"></td></tr></table></div>';
 
       mapPolygon.dummyData = polygon;
       polygon.events.on("over", function () {
@@ -193,25 +198,26 @@ polygonSeries.events.on("inited", function () {
 })
 
 var data = {
-  "BR": "Bruno<br>Marigoni",
-  "CR": "Renato<br>Souza",
-  "MX": "Alejandra<br>Solis",
-  "CO": "Marcelo<br>Burbano",
-  "EC": "Oliver<br>Klopfstein",
-  "ES": "Andrés<br>Cardó",
-  "US": "Hilario<br>Nuño"
+  "BR": "Brasil*Bruno<br>Marigoni*Brazil",
+  "CR": "Costa Rica*Renato<br>Souza*costarica",
+  "MX": "Mexico*Alejandra<br>Solis*Mexico",
+  "CO": "Colombia*Marcelo<br>Burbano*Colombia",
+  "EC": "Ecuador*Oliver<br>Klopfstein*Ecuator",
+  "ES": "España*Andrés<br>Cardó*Spain",
+  "US": "Estados Unidos*Hilario<br>Nuño*usa"
 }
 
-chart.homeZoomLevel = 1.8;
-chart.homeGeoPoint = {
-  latitude: 14,
-  longitude: 110
-}
+
 chart.seriesContainer.draggable = false;
 chart.seriesContainer.resizable = false;
 chart.chartContainer.wheelable = false;
-chart.deltaLongitude = 70;
+chart.deltaLongitude = 55;
 chart.panBehavior = "rotateLongLat";
 //chart.padding(10,10,10,10);
 chart.padding(0, 0, 0, 0);
-chart.dx = 0;
+chart.dx = 60;
+chart.homeZoomLevel = 1.8;
+chart.homeGeoPoint = {
+  latitude: 14,
+  longitude: 125
+}
