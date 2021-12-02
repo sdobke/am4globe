@@ -12,16 +12,19 @@ body {
   height: 100vh;
 }
 
-.pt88 {
-    padding-top: 88px !important;
+.texto{
+    padding-bottom: 88px;
+    padding-top: 72px;
+    padding-left: 30px;
 }
-.pb72 {
-    padding-bottom: 72px !important;
-}
+
 .img_data{width: 240px}
 .align-center{text-align: center;}
 .texto{text-align: left;}
 
+@media screen and (max-width: 600px) {
+  .texto{text-align: center;}
+}
 @media screen and (max-width: 1199px) {
   .texto{text-align: center;}
 }
